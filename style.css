@@ -11,7 +11,7 @@ body {
 }
 p {
   text-align: center;  /* Centra el texto */
-  line-height: 1.5; /* Ajusta el interlineado */
+  line-height: 2; /* Ajusta el interlineado */
 }
 #contacto input,
 #contacto nombre, email, mensaje {
