@@ -4,7 +4,41 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+/* ... (código CSS anterior) ... */
 
+#contacto .container {
+    text-align: center; /* Centra el formulario */
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%; 
+    max-width: 400px; /* Ajusta el ancho máximo del formulario */
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; 
+}
+
+#contacto textarea {
+    height: 150px; 
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+#contacto button {
+    background-color: #e8491d; /* Color de fondo del botón */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+#contacto button:hover {
+    background-color: #c73e18; /* Color de fondo al pasar el ratón */
+}
 .container {
     max-width: 960px;
     margin: 0 auto;
