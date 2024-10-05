@@ -1,14 +1,25 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-    background-color: #333;
+    background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -21,8 +32,34 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #e8491d;
+}
+
 section {
-    padding: 20px;
+    padding: 40px 0;
+}
+
+#inicio {
+    background: url("imagen_fondo.jpg") no-repeat center center/cover; 
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; 
+}
+
+#inicio h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#sobre-mi, #contacto {
     text-align: center;
 }
 
@@ -33,29 +70,41 @@ section {
 }
 
 .proyecto {
+    position: relative;
     width: 300px;
     margin: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
+    overflow: hidden;
 }
 
 .proyecto img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    height: auto;
+    transition: transform 0.3s ease;
 }
-/* style.css */
 
-/* ... (tu código CSS anterior) ... */
+.proyecto:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.proyecto:hover .overlay {
+    opacity: 1;
+}
 
 .ocultar {
   opacity: 0; 
@@ -66,4 +115,23 @@ footer {
 .mostrar {
   opacity: 1; 
   transform: translateY(0);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
