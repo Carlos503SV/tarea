@@ -1,5 +1,3 @@
-// script.js
-
 // Animación al hacer scroll: los elementos aparecen suavemente al entrar en la pantalla
 function mostrarElementosConScroll() {
   const elementos = document.querySelectorAll('.ocultar');
@@ -16,19 +14,7 @@ function mostrarElementosConScroll() {
 
 window.addEventListener('scroll', mostrarElementosConScroll);
 
-
-// Efecto hover en las imágenes de los proyectos
-const imagenesProyectos = document.querySelectorAll('.proyecto img');
-
-imagenesProyectos.forEach(imagen => {
-  imagen.addEventListener('mouseover', () => {
-    imagen.style.transform = 'scale(1.1)'; // Aumenta el tamaño al pasar el ratón
-  });
-
-  imagen.addEventListener('mouseout', () => {
-    imagen.style.transform = 'scale(1.0)'; // Vuelve al tamaño original
-  });
-});
+// Efecto hover en las imágenes de los proyectos (ya incluido en el CSS)
 
 // Validación básica del formulario de contacto
 const formulario = document.querySelector('#contacto form');
@@ -46,4 +32,16 @@ formulario.addEventListener('submit', (event) => {
     alert('¡Gracias por tu mensaje!');
     formulario.reset(); // Limpia el formulario
   }
+});
+
+// Activar la clase "active" en el enlace de navegación actual
+const enlacesNav = document.querySelectorAll('nav a');
+
+enlacesNav.forEach(enlace => {
+  enlace.addEventListener('click', () => {
+    // Remover la clase "active" de todos los enlaces
+    enlacesNav.forEach(enlace => enlace.classList.remove('active'));
+    // Agregar la clase "active" al enlace actual
+    enlace.classList.add('active');
+  });
 });
