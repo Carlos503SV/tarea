@@ -91,6 +91,7 @@ section {
 #inicio h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    font-color: black;
 }
 
 #sobre-mi, #contacto {
