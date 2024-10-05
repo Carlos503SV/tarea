@@ -11,7 +11,7 @@ body {
 }
 
 #contacto input,
-#contacto textarea {
+#contacto nombre, email, mensaje {
     width: 100%; 
     max-width: 400px; /* Ajusta el ancho máximo del formulario */
     margin: 10px 0;
