@@ -83,7 +83,7 @@ section {
 
 #inicio {
     background: url("imagen_fondo.jpg") no-repeat center center/cover; 
-    color: #fff;
+    color: black;
     text-align: center;
     padding: 100px 0; 
 }
