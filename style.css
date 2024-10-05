@@ -9,7 +9,10 @@ body {
 #contacto .container {
     text-align: center; /* Centra el formulario */
 }
-
+p {
+  text-align: center;  /* Centra el texto */
+  line-height: 1.15; /* Ajusta el interlineado */
+}
 #contacto input,
 #contacto nombre, email, mensaje {
     width: 100%; 
